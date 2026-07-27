@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kebijakan Privasi – BookCashly</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap"
+    rel="stylesheet" />
+  <style>
+    /* ── Reset & Base ── */
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #f6f9fc;
+      color: #1a2639;
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+
+    /* ── Container ── */
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 2rem;
+      box-shadow: 0 20px 60px rgba(0, 20, 40, 0.08), 0 8px 24px rgba(0, 20, 40, 0.04);
+      padding: 3rem 2.5rem;
+      transition: box-shadow 0.3s ease;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 1rem 0.75rem;
+      }
+
+      .container {
+        padding: 2rem 1.25rem;
+        border-radius: 1.25rem;
+      }
+    }
+
+    /* ── Header ── */
+    .header {
+      text-align: center;
+      padding-bottom: 2.5rem;
+      border-bottom: 2px solid #eef3f8;
+      margin-bottom: 2.5rem;
+    }
+
+    .app-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #eef7ff;
+      color: #0b5e7c;
+      font-weight: 600;
+      font-size: 0.8rem;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+      padding: 0.4rem 1.2rem;
+      border-radius: 100px;
+      margin-bottom: 1.2rem;
+      border: 1px solid rgba(11, 94, 124, 0.12);
+    }
+
+    .app-badge .icon {
+      font-size: 1rem;
+    }
+
+    .header h1 {
+      font-size: 2.6rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      background: linear-gradient(135deg, #0b2b3f 0%, #1a5f7a 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 0.4rem;
+    }
+
+    .header .subhead {
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: #4b5e6e;
+      margin-top: 0.25rem;
+    }
+
+    .last-updated {
+      display: inline-block;
+      margin-top: 1rem;
+      background: #f0f4f9;
+      padding: 0.3rem 1.2rem;
+      border-radius: 100px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: #2c4a5e;
+      border: 1px solid #e2eaf0;
+    }
+
+    .last-updated span {
+      font-weight: 600;
+    }
+
+    /* ── Intro Text ── */
+    .intro {
+      background: #f8fbff;
+      border-left: 4px solid #1a7f9e;
+      padding: 1.5rem 2rem;
+      border-radius: 1rem;
+      margin-bottom: 2.5rem;
+      font-size: 1.05rem;
+      color: #1a2e3f;
+    }
+
+    .intro strong {
+      color: #0b5e7c;
+    }
+
+    /* ── Sections ── */
+    .section {
+      margin-bottom: 2.8rem;
+    }
+
+    .section:last-of-type {
+      margin-bottom: 0;
+    }
+
+    .section-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2rem;
+      height: 2rem;
+      background: #0b5e7c;
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.85rem;
+      border-radius: 50%;
+      margin-right: 0.6rem;
+      flex-shrink: 0;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .section-header h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: #0b2b3f;
+    }
+
+    .section p {
+      margin-bottom: 0.9rem;
+      color: #1e3347;
+    }
+
+    .section p:last-child {
+      margin-bottom: 0;
+    }
+
+    .section ul {
+      list-style: none;
+      padding: 0;
+      margin: 0.8rem 0 1rem 0;
+    }
+
+    .section ul li {
+      position: relative;
+      padding-left: 1.8rem;
+      margin-bottom: 0.5rem;
+      color: #1e3347;
+    }
+
+    .section ul li::before {
+      content: "▹";
+      position: absolute;
+      left: 0;
+      color: #1a7f9e;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+
+    .section .highlight-box {
+      background: #f5faff;
+      border-radius: 0.9rem;
+      padding: 1.2rem 1.8rem;
+      margin: 1rem 0 0.5rem 0;
+      border: 1px solid #e3edf5;
+    }
+
+    .section .highlight-box strong {
+      color: #0b5e7c;
+    }
+
+    /* ── Sub-sections (A, B, C, D) ── */
+    .sub-section {
+      margin-top: 1.4rem;
+      padding-left: 0.5rem;
+    }
+
+    .sub-section h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #0b3b4f;
+      margin-bottom: 0.4rem;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .sub-section h3 .label {
+      display: inline-block;
+      background: #e4eef6;
+      color: #0b5e7c;
+      font-weight: 700;
+      font-size: 0.75rem;
+      padding: 0.1rem 0.7rem;
+      border-radius: 100px;
+      letter-spacing: 0.3px;
+      margin-right: 0.3rem;
+    }
+
+    .sub-section ul {
+      margin-top: 0.3rem;
+    }
+
+    /* ── Summary Cards ── */
+    .summary-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1.5rem 0 0.5rem 0;
+    }
+
+    @media (max-width: 500px) {
+      .summary-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .summary-item {
+      background: #f5faff;
+      border-radius: 1rem;
+      padding: 1.2rem 1.4rem;
+      border: 1px solid #e3edf5;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.8rem;
+      transition: background 0.2s ease;
+    }
+
+    .summary-item:hover {
+      background: #edf6fe;
+    }
+
+    .summary-item .emoji {
+      font-size: 1.5rem;
+      line-height: 1.2;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+
+    .summary-item p {
+      font-size: 0.95rem;
+      margin: 0;
+      color: #1a2e3f;
+    }
+
+    .summary-item p strong {
+      color: #0b5e7c;
+    }
+
+    /* ── Footer ── */
+    .footer {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 2px solid #eef3f8;
+      text-align: center;
+    }
+
+    .footer .brand {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: #0b2b3f;
+      letter-spacing: -0.02em;
+    }
+
+    .footer .brand span {
+      color: #1a7f9e;
+    }
+
+    .footer p {
+      font-size: 0.9rem;
+      color: #4b6172;
+      margin-top: 0.4rem;
+    }
+
+    .footer .contact {
+      margin-top: 1.2rem;
+      display: inline-flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.8rem 1.8rem;
+      background: #f5faff;
+      padding: 0.8rem 2rem;
+      border-radius: 100px;
+      border: 1px solid #e3edf5;
+    }
+
+    .footer .contact a {
+      color: #0b5e7c;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: color 0.2s ease;
+    }
+
+    .footer .contact a:hover {
+      color: #083e52;
+      text-decoration: underline;
+    }
+
+    .footer .contact .divider {
+      color: #c0d2df;
+      user-select: none;
+    }
+
+    /* ── Utility ── */
+    .text-muted {
+      color: #4b6172;
+      font-size: 0.95rem;
+    }
+
+    .mt-1 {
+      margin-top: 0.5rem;
+    }
+
+    .mb-1 {
+      margin-bottom: 0.5rem;
+    }
+
+    /* ── Print-friendly ── */
+    @media print {
+      body {
+        background: #fff;
+        padding: 0.5in;
+      }
+
+      .container {
+        box-shadow: none;
+        padding: 0;
+      }
+
+      .summary-item:hover {
+        background: #f5faff;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- ═══ HEADER ═══ -->
+    <header class="header">
+      <div class="app-badge">
+        <span class="icon">📘</span> Kebijakan Privasi
+      </div>
+      <h1>BookCashly</h1>
+      <p class="subhead">Data keuangan Anda tetap menjadi milik Anda — selalu.</p>
+      <div class="last-updated">
+        <span>Terakhir diperbarui:</span> 27 Juli 2026
+      </div>
+    </header>
+
+    <!-- ═══ INTRO ═══ -->
+    <div class="intro">
+      <p>
+        <strong>BookCashly</strong> ("kami", "kita", atau "Aplikasi") adalah aplikasi keuangan pribadi
+        yang dirancang untuk membantu pengguna mencatat, mengelola, dan memantau aktivitas keuangan
+        sehari-hari.
+      </p>
+      <p style="margin-top: 0.5rem;">
+        Privasi Anda penting bagi kami. Kebijakan Privasi ini menjelaskan bagaimana BookCashly
+        menangani informasi saat Anda menggunakan aplikasi kami.
+      </p>
+      <p style="margin-top: 0.5rem; font-weight: 500; color: #0b5e7c;">
+        ✓ Dengan menggunakan BookCashly, Anda menyetujui praktik yang dijelaskan dalam Kebijakan Privasi ini.
+      </p>
+    </div>
+
+    <!-- ═══ PASAL 1 ═══ -->
+    <section class="section">
+      <div class="section-header">
+        <span class="section-number">1</span>
+        <h2>Informasi yang Kami Kumpulkan</h2>
+      </div>
+      <p>
+        BookCashly dirancang dengan memperhatikan privasi. Informasi keuangan yang Anda masukkan
+        ke dalam aplikasi sebagian besar disimpan secara lokal di perangkat Anda. Tergantung pada
+        cara Anda menggunakan aplikasi, BookCashly dapat menangani jenis informasi berikut:
+      </p>
+
+      <!-- A. Data Keuangan -->
+      <div class="sub-section">
+        <h3><span class="label">A</span> Data Keuangan</h3>
+        <p>
+          Anda dapat secara sukarela memasukkan informasi keuangan ke dalam BookCashly, termasuk
+          namun tidak terbatas pada:
+        </p>
+        <ul>
+          <li>Catatan pemasukan</li>
+          <li>Catatan pengeluaran</li>
+          <li>Jumlah transaksi</li>
+          <li>Kategori transaksi</li>
+          <li>Deskripsi atau catatan transaksi</li>
+          <li>Informasi akun atau dompet</li>
+          <li>Tujuan keuangan</li>
+          <li>Informasi anggaran</li>
+          <li>Informasi lain yang Anda pilih untuk dimasukkan ke dalam aplikasi</li>
+        </ul>
+        <p>Informasi ini digunakan semata-mata untuk menyediakan fitur manajemen keuangan BookCashly.</p>
+      </div>
+
+      <!-- B. Data Cadangan -->
+      <div class="sub-section">
+        <h3><span class="label">B</span> Data Cadangan (Backup)</h3>
+        <p>
+          BookCashly menyediakan fungsi cadangan dan pemulihan. Saat Anda membuat cadangan,
+          data keuangan yang disertakan dalam file cadangan dihasilkan dari informasi yang
+          tersimpan di aplikasi Anda.
+        </p>
+        <p>
+          Tergantung pada metode cadangan yang Anda pilih, file cadangan dapat disimpan di
+          perangkat Anda, diekspor ke lokasi yang Anda pilih, atau dibagikan/dipindahkan oleh
+          Anda ke perangkat atau layanan penyimpanan lain.
+        </p>
+        <div class="highlight-box">
+          <strong>📁 Catatan:</strong> BookCashly tidak mengendalikan atau memiliki akses ke file cadangan
+          yang Anda ekspor, pindahkan, atau simpan secara manual di luar aplikasi. Anda
+          bertanggung jawab untuk menjaga keamanan file cadangan Anda.
+        </div>
+      </div>
+
+      <!-- C. Informasi Pembelian -->
+      <div class="sub-section">
+        <h3><span class="label">C</span> Informasi Pembelian</h3>
+        <p>
+          BookCashly dapat menyediakan pembelian dukungan atau hadiah opsional melalui Google Play Billing.
+          Jika Anda memilih untuk mendukung BookCashly melalui pembelian dalam aplikasi, transaksi
+          pembayaran diproses oleh Google Play dan tunduk pada syarat dan kebijakan privasi Google
+          yang berlaku.
+        </p>
+        <p>
+          BookCashly tidak mengumpulkan atau menyimpan secara langsung detail kartu kredit, kartu debit,
+          rekening bank, atau informasi pembayaran lainnya. Kami dapat menerima informasi terbatas
+          terkait transaksi, seperti status pembelian atau informasi transaksi yang diperlukan untuk
+          memproses pembelian.
+        </p>
+      </div>
+
+      <!-- D. Buy Me a Coffee -->
+      <div class="sub-section">
+        <h3><span class="label">D</span> Buy Me a Coffee</h3>
+        <p>
+          BookCashly dapat menyediakan tautan opsional ke Buy Me a Coffee bagi pengguna yang ingin
+          mendukung pengembangan aplikasi. Jika Anda memilih untuk menggunakan layanan ini,
+          Anda akan diarahkan ke situs web Buy Me a Coffee.
+        </p>
+        <p>
+          Informasi apa pun yang Anda berikan kepada Buy Me a Coffee diatur oleh kebijakan privasi
+          dan syarat layanan mereka sendiri. BookCashly tidak mengontrol bagaimana Buy Me a Coffee
+          mengumpulkan atau memproses informasi Anda.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══ PASAL 2 ═══ -->
+    <section class="section">
+      <div class="section-header">
+        <span class="section-number">2</span>
+        <h2>Bagaimana Kami Menggunakan Informasi Anda</h2>
+      </div>
+      <p>Informasi yang disimpan atau diproses oleh BookCashly digunakan untuk menyediakan dan meningkatkan
+        fungsionalitas aplikasi.
+        Ini dapat mencakup:</p>
+      <ul>
+        <li>Mencatat pemasukan dan pengeluaran Anda</li>
+        <li>Menampilkan ringkasan dan laporan keuangan</li>
+        <li>Menghitung saldo keuangan</li>
+        <li>Mengelola anggaran dan tujuan keuangan</li>
+        <li>Menyediakan fungsi cadangan dan pemulihan</li>
+        <li>Meningkatkan fungsionalitas aplikasi dan pengalaman pengguna</li>
+        <li>Memproses pembelian dalam aplikasi atau transaksi dukungan opsional</li>
+        <li>Menanggapi permintaan dukungan saat Anda menghubungi kami</li>
+      </ul>
+      <div class="highlight-box" style="margin-top: 0.8rem;">
+        <strong>🔒 Kami tidak menggunakan informasi keuangan pribadi Anda untuk tujuan periklanan.</strong>
+      </div>
+    </section>
+
+    <!-- ═══ PASAL 3 ═══ -->
+    <section class="section">
+      <div class="section-header">
+        <span class="section-number">3</span>
+        <h2>Penyimpanan Data Lokal</h2>
+      </div>
+      <p>
+        BookCashly dirancang untuk menyimpan catatan keuangan Anda secara lokal di perangkat Anda.
+        Catatan keuangan Anda <strong>tidak</strong> sengaja diunggah atau disimpan di server
+        BookCashly kecuali dinyatakan secara tegas dalam aplikasi atau dalam pembaruan Kebijakan
+        Privasi ini di masa mendatang.
+      </p>
+      <div class="highlight-box">
+        <p style="margin-bottom: 0.4rem;"><strong>Karena data keuangan Anda disimpan secara lokal:</strong></p>
+        <ul style="margin: 0;">
+          <li>BookCashly tidak memiliki akses langsung ke catatan keuangan Anda.</li>
+          <li>BookCashly tidak dapat melihat catatan pemasukan atau pengeluaran Anda dari jarak jauh.</li>
+          <li>Informasi keuangan Anda tetap berada dalam kendali Anda di perangkat Anda.</li>
+          <li>Menghapus aplikasi dapat mengakibatkan hilangnya data yang disimpan secara lokal jika Anda belum membuat
+            cadangan.
+          </li>
+        </ul>
+        <p style="margin-top: 0.6rem;"><strong>Anda bertanggung jawab untuk menjaga cadangan data yang tepat.</strong>
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══ PASAL 4 ═══ -->
+    <section class="section">
+      <div class="section-header">
+        <span class="section-number">4</span>
+        <h2>Cadangan dan Pemulihan</h2>
+      </div>
+      <p>
+        BookCashly dapat memungkinkan Anda mengekspor atau mencadangkan data keuangan Anda. File cadangan dapat
+        berisi informasi yang telah Anda masukkan ke dalam aplikasi, termasuk catatan keuangan.
+      </p>
+      <p>
+        Anda harus menyimpan file cadangan di lokasi yang aman dan menghindari berbagi dengan
+        individu yang tidak berwenang. Jika Anda memilih untuk mengunggah atau menyimpan file cadangan
+        menggunakan penyedia penyimpanan cloud pihak ketiga, seperti Google Drive atau layanan lainnya,
+        penanganan data tersebut tunduk pada kebijakan privasi dan ketentuan penyedia pihak ketiga tersebut.
+      </p>
+      <div class="highlight-box">
+        <strong>⚠️ BookCashly tidak bertanggung jawab</strong> atas praktik privasi atau keamanan
+        layanan pihak ketiga yang Anda pilih secara mandiri untuk menyimpan atau
+        mentransfer file cadangan Anda.
+      </div>
+    </section>
+
+    <!-- ═══ PASAL 5 ═══ -->
+    <section class="section">
+      <div class="section-header">
+        <span class="section-number">5</span>
+        <h2>Berbagi Data</h2>
+      </div>
+      <p>
+        BookCashly <strong>tidak</strong> menjual, menyewakan, atau memperdagangkan informasi pribadi
+        atau data keuangan Anda kepada pihak ketiga. Kami tidak dengan sengaja membagikan catatan
+        keuangan Anda dengan pengiklan, perusahaan pemasaran, atau perantara data.
+      </p>
+      <p>
+        Data keuangan Anda tetap disimpan secara lokal di perangkat Anda kecuali Anda memilih untuk
+        mengekspor, membagikan, atau mentransfernya.
+      </p>
+      <p>
+        Layanan pihak ketiga dapat memproses informasi terbatas saat Anda menggunakan layanan mereka,
+        termasuk Google Play Billing, Buy Me a Coffee, atau layanan penyimpanan cloud/berbagi
+        yang Anda pilih untuk cadangan atau transfer data.
+      </p>
+      <div class="highlight-box">
+        <strong>📌 Layanan-layanan ini beroperasi secara independen dan memiliki kebijakan privasi
+          masing-masing.</strong>
+      </div>
+    </section>
+
+    <!-- ═══ PASAL 6 ═══ -->
+    <section class="section">
+      <div class="section-header">
+        <span class="section-number">6</span>
+        <h2>Google Play Billing</h2>
+      </div>
+      <p>
+        BookCashly dapat menawarkan pembelian dalam aplikasi opsional yang memungkinkan pengguna mendukung
+        pengembangan aplikasi yang berkelanjutan. Semua pembelian dalam aplikasi diproses
+        melalui Google Play Billing.
+      </p>
+      <p>
+        BookCashly tidak mengumpulkan atau menyimpan detail kartu pembayaran, informasi rekening bank,
+        atau kredensial pembayaran sensitif lainnya. Google dapat mengumpulkan dan
+        memproses informasi terkait pembelian sesuai dengan kebijakan privasi Google
+        dan ketentuan Google Play yang berlaku.
+      </p>
+      <p>
+        Untuk informasi lebih lanjut tentang praktik privasi Google, silakan kunjungi
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer"
+          style="color: #0b5e7c; font-weight: 500;">kebijakan privasi resmi Google</a>.
+      </p>
+    </section>
+
+    <!-- ═══ PASAL 7 ═══ -->
+    <section class="section">
+      <div class="section-header">
+        <span class="section-number">7</span>
+        <h2>Layanan Pihak Ketiga</h2>
+      </div>
+      <p>BookCashly dapat menggunakan atau menyediakan akses ke layanan pihak ketiga. Layanan ini dapat mencakup:</p>
+      <ul>
+        <li>Google Play Services</li>
+        <li>Google Play Billing</li>
+        <li>Buy Me a Coffee</li>
+        <li>Layanan lain yang mungkin diperkenalkan dalam versi aplikasi di masa mendatang</li>
+      </ul>
+      <p>
+        Layanan pihak ketiga dapat mengumpulkan informasi sesuai dengan kebijakan privasi mereka sendiri.
+        Kami mendorong Anda untuk meninjau kebijakan privasi dari layanan pihak ketiga yang Anda akses
+        melalui BookCashly.
+      </p>
+    </section>
+
+    <!-- ═══ PASAL 8 ═══ -->
+    <section class="section">
+      <div class="section-header">
+        <span class="section-number">8</span>
+        <h2>Keamanan Data</h2>
+      </div>
+      <p>Kami mengambil langkah-langkah yang wajar untuk melindungi informasi yang ditangani oleh BookCashly.</p>
+      <p>
+        Karena BookCashly terutama menyimpan informasi keuangan secara lokal di perangkat Anda,
+        keamanan perangkat Anda adalah bagian penting dalam melindungi data Anda.
+      </p>
+      <div class="highlight-box">
+        <p style="margin-bottom: 0.4rem;"><strong>Kami merekomendasikan agar Anda:</strong></p>
+        <ul style="margin: 0;">
+          <li>Menggunakan kode sandi perangkat yang aman</li>
+          <li>Mengaktifkan autentikasi biometrik jika tersedia</li>
+          <li>Selalu memperbarui sistem operasi Anda</li>
+          <li>Selalu memperbarui BookCashly ke versi terbaru yang tersedia</li>
+          <li>Menyimpan file cadangan dengan aman</li>
+          <li>Menghindari berbagi file cadangan dengan individu yang tidak berwenang</li>
+        </ul>
+      </div>
+      <p class="text-muted" style="margin-top: 0.6rem;">
+        Namun, tidak ada metode penyimpanan atau transmisi elektronik yang dapat dijamin
+        sepenuhnya aman.
+      </p>
+    </section>
+
+    <!-- ═══ PASAL 9 ═══ -->
+    <section class="section">
+      <div class="section-header">
+        <span class="section-number">9</span>
+        <h2>Retensi Data</h2>
+      </div>
+      <p>
+        BookCashly tidak dengan sengaja menyimpan catatan keuangan Anda di server kami
+        karena data keuangan Anda dirancang untuk disimpan secara lokal di perangkat Anda.
+      </p>
+      <p>
+        Data Anda tetap berada di perangkat Anda sampai Anda menghapus catatan individual, menghapus data aplikasi,
+        menghapus aplikasi, mengganti atau mereset perangkat, atau memulihkan perangkat tanpa
+        cadangan yang relevan.
+      </p>
+      <p>
+        Jika Anda membuat file cadangan, file tersebut mungkin tetap berada di mana pun Anda memilih untuk menyimpannya
+        sampai Anda menghapusnya.
+      </p>
+    </section>
+
+    <!-- ═══ PASAL 10 ═══ -->
+    <section class="section">
+      <div class="section-header">
+        <span class="section-number">10</span>
+        <h2>Penghapusan Data</h2>
+      </div>
+      <p>
+        Anda dapat menghapus catatan keuangan Anda langsung di dalam BookCashly, jika didukung.
+        Anda juga dapat menghapus data aplikasi yang disimpan secara lokal menggunakan pengaturan sistem
+        operasi perangkat Anda atau dengan mencopot pemasangan aplikasi.
+      </p>
+      <p>
+        Jika Anda telah membuat file cadangan di luar aplikasi, Anda bertanggung jawab untuk
+        menghapus file cadangan tersebut dari lokasi tempat Anda menyimpannya.
+      </p>
+      <div class="highlight-box">
+        <strong>ℹ️</strong> Karena BookCashly dirancang untuk menyimpan catatan keuangan secara lokal,
+        kami umumnya tidak memiliki akses ke data keuangan Anda dan oleh karena itu tidak dapat menghapus
+        dari jarak jauh data yang tetap berada semata-mata di perangkat Anda atau di file cadangan yang
+        Anda kendalikan.
+      </div>
+      <p style="margin-top: 0.6rem;">
+        Untuk pertanyaan mengenai penghapusan data, Anda dapat menghubungi kami menggunakan informasi kontak
+        yang tersedia di bawah.
+      </p>
+    </section>
+
+    <!-- ═══ PASAL 11 ═══ -->
+    <section class="section">
+      <div class="section-header">
+        <span class="section-number">11</span>
+        <h2>Privasi Anak-anak</h2>
+      </div>
+      <p>
+        BookCashly adalah aplikasi keuangan pribadi dan tidak secara khusus ditujukan untuk anak-anak.
+        Kami tidak dengan sengaja mengumpulkan informasi pribadi dari anak-anak melalui BookCashly.
+      </p>
+      <p>
+        Jika Anda yakin bahwa seorang anak telah memberikan informasi pribadi kepada kami, harap hubungi kami
+        sehingga kami dapat mengambil tindakan yang tepat.
+      </p>
+    </section>
+
+    <!-- ═══ PASAL 12 ═══ -->
+    <section class="section">
+      <div class="section-header">
+        <span class="section-number">12</span>
+        <h2>Hak-hak Anda</h2>
+      </div>
+      <p>
+        Tergantung pada lokasi Anda dan hukum yang berlaku, Anda mungkin memiliki hak terkait
+        informasi pribadi Anda. Hak-hak ini dapat mencakup:
+      </p>
+      <ul>
+        <li>Hak untuk mengetahui informasi apa yang dikumpulkan</li>
+        <li>Hak untuk mengakses informasi Anda</li>
+        <li>Hak untuk meminta koreksi atas informasi yang tidak akurat</li>
+        <li>Hak untuk meminta penghapusan informasi pribadi yang berlaku</li>
+        <li>Hak untuk menarik persetujuan jika berlaku</li>
+        <li>Hak untuk menolak kegiatan pemrosesan data tertentu</li>
+      </ul>
+      <p>
+        Karena BookCashly terutama menyimpan informasi keuangan Anda secara lokal di perangkat Anda,
+        Anda umumnya memiliki kendali langsung atas catatan keuangan Anda.
+      </p>
+      <p>
+        Jika Anda memiliki pertanyaan tentang hak privasi Anda atau informasi yang ditangani oleh BookCashly,
+        silakan hubungi kami.
+      </p>
+    </section>
+
+    <!-- ═══ PASAL 13 ═══ -->
+    <section class="section">
+      <div class="section-header">
+        <span class="section-number">13</span>
+        <h2>Perubahan pada Kebijakan Privasi Ini</h2>
+      </div>
+      <p>
+        Kami dapat memperbarui Kebijakan Privasi ini dari waktu ke waktu untuk mencerminkan perubahan pada BookCashly,
+        layanan kami, atau persyaratan hukum yang berlaku. Saat kami membuat perubahan, kami akan memperbarui
+        tanggal "Terakhir diperbarui" di bagian atas Kebijakan Privasi ini.
+      </p>
+      <p>
+        Kami mendorong Anda untuk meninjau Kebijakan Privasi ini secara berkala. Penggunaan BookCashly
+        Anda yang berkelanjutan setelah perubahan pada Kebijakan Privasi ini mulai berlaku berarti bahwa Anda
+        mengakui Kebijakan Privasi yang diperbarui.
+      </p>
+    </section>
+
+    <!-- ═══ PASAL 14 ═══ -->
+    <section class="section">
+      <div class="section-header">
+        <span class="section-number">14</span>
+        <h2>Hubungi Kami</h2>
+      </div>
+      <p>
+        Jika Anda memiliki pertanyaan, kekhawatiran, atau permintaan terkait Kebijakan Privasi ini atau
+        praktik privasi BookCashly, silakan hubungi kami.
+      </p>
+      <div
+        style="background: #f5faff; border-radius: 1rem; padding: 1.2rem 1.8rem; border: 1px solid #e3edf5; margin-top: 0.6rem;">
+        <p style="margin-bottom: 0.2rem;"><strong>Aplikasi:</strong> BookCashly</p>
+        <p style="margin-bottom: 0.2rem;"><strong>Pengembang:</strong> Ridwan Romadhon</p>
+        <p style="margin-bottom: 0.2rem;"><strong>Email:</strong> <a href="mailto:ridwanromadhon48@gmail.com"
+            style="color: #0b5e7c; font-weight: 500;">ridwanromadhon48@gmail.com</a></p>
+      </div>
+    </section>
+
+    <!-- ═══ PASAL 15 – RINGKASAN ═══ -->
+    <section class="section" style="margin-bottom: 0;">
+      <div class="section-header">
+        <span class="section-number">15</span>
+        <h2>Ringkasan</h2>
+      </div>
+      <p style="margin-bottom: 1rem;">
+        BookCashly dirancang untuk membantu Anda mengelola keuangan pribadi sambil menjaga
+        informasi keuangan Anda tetap privat. Ringkasnya:
+      </p>
+
+      <div class="summary-grid">
+        <div class="summary-item">
+          <span class="emoji">📱</span>
+          <p><strong>Penyimpanan lokal</strong><br />Catatan keuangan Anda disimpan secara lokal di perangkat Anda.</p>
+        </div>
+        <div class="summary-item">
+          <span class="emoji">🚫</span>
+          <p><strong>Tanpa penjualan</strong><br />Kami tidak menjual data keuangan Anda.</p>
+        </div>
+        <div class="summary-item">
+          <span class="emoji">🔒</span>
+          <p><strong>Tanpa berbagi iklan</strong><br />Kami tidak dengan sengaja membagikan catatan keuangan Anda dengan
+            pengiklan.</p>
+        </div>
+        <div class="summary-item">
+          <span class="emoji">🧑‍💻</span>
+          <p><strong>Anda yang mengendalikan</strong><br />Anda mengendalikan catatan keuangan yang disimpan di
+            perangkat Anda.</p>
+        </div>
+        <div class="summary-item">
+          <span class="emoji">💾</span>
+          <p><strong>Cadangan di bawah kendali Anda</strong><br />File cadangan berada di bawah kendali Anda.</p>
+        </div>
+        <div class="summary-item">
+          <span class="emoji">🛒</span>
+          <p><strong>Pemrosesan pihak ketiga</strong><br />Google Play memproses penagihan; Buy Me a Coffee memproses
+            pembayaran dukungan.</p>
+        </div>
+      </div>
+
+      <div class="highlight-box" style="margin-top: 1.2rem; text-align: center; font-size: 1.05rem;">
+        <strong>🙏 Terima kasih telah mempercayai BookCashly</strong> untuk membantu Anda mengelola keuangan
+        sehari-hari.
+      </div>
+    </section>
+
+    <!-- ═══ FOOTER ═══ -->
+    <footer class="footer">
+      <div class="brand">Book<span>Cashly</span></div>
+      <p>Privasi Anda, prioritas kami.</p>
+      <div class="contact">
+        <a href="mailto:ridwanromadhon48@gmail.com">ridwanromadhon48@gmail.com</a>
+      </div>
+      <p style="margin-top: 1.2rem; font-size: 0.8rem; color: #6b859b;">
+        &copy; 2026 BookCashly. Seluruh hak cipta dilindungi.
+      </p>
+    </footer>
+
+  </div>
+
+</body>
+
+</html>
