@@ -3,7 +3,7 @@
   "sources": {
     "opentopomap": {
       "type": "raster",
-      "tiles": ["https://tile.openmaps.fr/openhikingmap/{z}/{x}/{y}.png"],
+      "tiles": ["https://tile.opentopomap.org/{z}/{x}/{y}.png"],
       "tileSize": 256,
       "attribution": "openmaps"
     },
