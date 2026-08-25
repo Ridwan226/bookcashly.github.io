@@ -28,7 +28,7 @@
   },
   "terrain": {
     "source": "terrain-source",
-    "exaggeration": 1.2
+    "exaggeration": 1.5
   },
   "layers": [
     {
@@ -37,6 +37,17 @@
       "source": "opentopomap",
       "paint": {
         "raster-opacity": 1.0
+      }
+    },
+    {
+      "id": "3d-hillshade",
+      "type": "hillshade",
+      "source": "terrain-source",
+      "paint": {
+        "hillshade-exaggeration": 0.8,
+        "hillshade-shadow-color": "#333333",
+        "hillshade-highlight-color": "#ffffff",
+        "hillshade-illumination-direction": 335
       }
     },
     {
