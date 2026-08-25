@@ -12,6 +12,13 @@
       ],
       "encoding": "terrarium",
       "tileSize": 256
+    },
+    "hiking": {
+      "type": "raster",
+      "tiles": [
+        "https://tile.waymarkedtrails.org/hiking/{z}/{x}/{y}.png"
+      ],
+      "tileSize": 256
     }
   },
   "terrain": {
@@ -23,11 +30,11 @@
       "id": "background",
       "type": "background",
       "paint": {
-        "background-color": "#f8f4f0"
+        "background-color": "#e8e4db"
       }
     },
     {
-      "id": "landcover-forest",
+      "id": "landcover-wood",
       "type": "fill",
       "source": "openfreemap",
       "source-layer": "landcover",
@@ -36,8 +43,49 @@
         "fill-color": "#aed2a4",
         "fill-opacity": 0.8
       }
+    },
+    {
+      "id": "water",
+      "type": "fill",
+      "source": "openfreemap",
+      "source-layer": "water",
+      "paint": {
+        "fill-color": "#9bcfe4"
+      }
+    },
+    {
+      "id": "transportation",
+      "type": "line",
+      "source": "openfreemap",
+      "source-layer": "transportation",
+      "paint": {
+        "line-color": "#ffffff",
+        "line-width": 1.5
+      }
+    },
+    {
+      "id": "place-text",
+      "type": "symbol",
+      "source": "openfreemap",
+      "source-layer": "place",
+      "layout": {
+        "text-field": ["get", "name:latin"],
+        "text-size": 14,
+        "text-pitch-alignment": "viewport" 
+      },
+      "paint": {
+        "text-color": "#333333",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1.5
+      }
+    },
+    {
+      "id": "hiking-layer",
+      "type": "raster",
+      "source": "hiking",
+      "paint": {
+        "raster-opacity": 0.85
+      }
     }
-    // (Di sini biasanya diisi lapisan jalan, air, dan teks yang panjang.
-    // Jika Anda memakai URL style bawaan OpenFreeMap, lapisan ini sudah otomatis ada).
   ]
 }
