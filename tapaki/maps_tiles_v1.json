@@ -1,9 +1,21 @@
 {
   "version": 8,
   "sources": {
-    "openfreemap": {
-      "type": "vector",
-      "url": "https://tiles.openfreemap.org/planet"
+    "opentopomap": {
+      "type": "raster",
+      "tiles": [
+        "https://tile.opentopomap.org/{z}/{x}/{y}.png"
+      ],
+      "tileSize": 256,
+      "attribution": "© OpenTopoMap"
+    },
+    "hiking": {
+      "type": "raster",
+      "tiles": [
+        "https://tile.waymarkedtrails.org/hiking/{z}/{x}/{y}.png"
+      ],
+      "tileSize": 256,
+      "attribution": "© Waymarked Trails"
     },
     "terrain-source": {
       "type": "raster-dem",
@@ -12,71 +24,19 @@
       ],
       "encoding": "terrarium",
       "tileSize": 256
-    },
-    "hiking": {
-      "type": "raster",
-      "tiles": [
-        "https://tile.waymarkedtrails.org/hiking/{z}/{x}/{y}.png"
-      ],
-      "tileSize": 256
     }
   },
   "terrain": {
     "source": "terrain-source",
-    "exaggeration": 1.2
+    "exaggeration": 2.0
   },
   "layers": [
     {
-      "id": "background",
-      "type": "background",
+      "id": "opentopomap-layer",
+      "type": "raster",
+      "source": "opentopomap",
       "paint": {
-        "background-color": "#e8e4db"
-      }
-    },
-    {
-      "id": "landcover-wood",
-      "type": "fill",
-      "source": "openfreemap",
-      "source-layer": "landcover",
-      "filter": ["==", "class", "wood"],
-      "paint": {
-        "fill-color": "#aed2a4",
-        "fill-opacity": 0.8
-      }
-    },
-    {
-      "id": "water",
-      "type": "fill",
-      "source": "openfreemap",
-      "source-layer": "water",
-      "paint": {
-        "fill-color": "#9bcfe4"
-      }
-    },
-    {
-      "id": "transportation",
-      "type": "line",
-      "source": "openfreemap",
-      "source-layer": "transportation",
-      "paint": {
-        "line-color": "#ffffff",
-        "line-width": 1.5
-      }
-    },
-    {
-      "id": "place-text",
-      "type": "symbol",
-      "source": "openfreemap",
-      "source-layer": "place",
-      "layout": {
-        "text-field": ["get", "name:latin"],
-        "text-size": 14,
-        "text-pitch-alignment": "viewport" 
-      },
-      "paint": {
-        "text-color": "#333333",
-        "text-halo-color": "#ffffff",
-        "text-halo-width": 1.5
+        "raster-opacity": 1.0
       }
     },
     {
