@@ -7,7 +7,7 @@
         "https://tile.opentopomap.org/{z}/{x}/{y}.png"
       ],
       "tileSize": 256,
-      "attribution": "© OpenTopoMap"
+      "attribution": "<a href=\"https://opentopomap.org\">© OpenTopoMap</a>"
     },
     "hiking": {
       "type": "raster",
@@ -15,7 +15,7 @@
         "https://tile.waymarkedtrails.org/hiking/{z}/{x}/{y}.png"
       ],
       "tileSize": 256,
-      "attribution": "© Waymarked Trails"
+      "attribution": "<a href=\"https://waymarkedtrails.org\">© Waymarked Trails</a>"
     },
     "terrain-source": {
       "type": "raster-dem",
@@ -23,7 +23,8 @@
         "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png"
       ],
       "encoding": "terrarium",
-      "tileSize": 256
+      "tileSize": 256,
+      "attribution": "<a href=\"https://aws.amazon.com/public-datasets/terrain/\">AWS Terrarium 3D</a>"
     }
   },
   "terrain": {
