@@ -1,0 +1,51 @@
+{
+  "version": 8,
+  "sources": {
+    "opentopomap": {
+      "type": "raster",
+      "tiles": [
+        "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{x}/{y}.png"
+      ],
+      "tileSize": 256,
+      "attribution": "© OpenTopoMap"
+    },
+    "hiking": {
+      "type": "raster",
+      "tiles": [
+        "https://tile.waymarkedtrails.org/hiking/{z}/{x}/{y}.png"
+      ],
+      "tileSize": 256,
+      "attribution": "© Waymarked Trails"
+    },
+    "terrain-source": {
+      "type": "raster-dem",
+      "tiles": [
+        "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png"
+      ],
+      "encoding": "terrarium",
+      "tileSize": 256
+    }
+  },
+  "terrain": {
+    "source": "terrain-source",
+    "exaggeration": 2.0
+  },
+  "layers": [
+    {
+      "id": "opentopomap-layer",
+      "type": "raster",
+      "source": "opentopomap",
+      "paint": {
+        "raster-opacity": 1.0
+      }
+    },
+    {
+      "id": "hiking-layer",
+      "type": "raster",
+      "source": "hiking",
+      "paint": {
+        "raster-opacity": 0.85
+      }
+    }
+  ]
+}
